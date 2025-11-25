@@ -6,7 +6,8 @@ Play as X and O locally in your browser, with automatic winner detection and a r
 ---
 
 ## 🚀 Demo
-
+![App Screenshot](./s1.png)
+![App Screenshot](./s2.png)
 ---
 
 ## ✨ Features
