@@ -1,0 +1,167 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.game-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 24px 20px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.18),
+    0 0 0 1px rgba(148, 163, 184, 0.16);
+}
+
+/* Header */
+
+.game-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game-title {
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.game-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Main game area */
+
+.game-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.status-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.status-label {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.status-text {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Board */
+
+.board {
+  margin: 8px 0;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.board-row {
+  display: flex;
+  gap: 6px;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.08s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.square:hover {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+  box-shadow: 0 4px 10px rgba(129, 140, 248, 0.3);
+  transform: translateY(-1px);
+}
+
+.square:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Highlight winning squares */
+
+.square--winner {
+  background: #d1fae5;
+  border-color: #34d399;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.4);
+}
+
+/* Reset button */
+
+.reset-button {
+  margin-top: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #4f46e5;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.08s ease,
+    box-shadow 0.15s ease;
+}
+
+.reset-button:hover {
+  background: #4338ca;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.35);
+  transform: translateY(-1px);
+}
+
+.reset-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Footer */
+
+.game-footer {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 480px) {
+  .game-card {
+    padding: 20px 16px 16px;
+  }
+
+  .square {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+}
